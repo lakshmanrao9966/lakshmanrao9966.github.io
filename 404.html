@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en-IN" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page not found | Dr. Kolla Lakshman Rao</title>
+  <meta name="robots" content="noindex">
+  <meta name="color-scheme" content="light dark">
+  <!--
+    GitHub Pages serves this file for any missing address, including nested ones such as /a/b/.
+    Relative links would break at that depth, so the styles are inline and the home link
+    points to the site root. When the file is opened locally, the script below switches the
+    link to index.html instead.
+  -->
+  <script>
+    (function () {
+      var theme = null;
+      try { theme = localStorage.getItem('klr-theme'); } catch (e) {}
+      if (theme !== 'light' && theme !== 'dark') {
+        theme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Source+Serif+4:opsz,wght@8..60,600&amp;display=swap">
+  <style>
+    :root {
+      --paper: #F5F6F9; --ink: #131A2B; --muted: #586378; --line: #DADEE6;
+      --heading: #16244A; --navy: #16244A; --on-navy: #F3F2EE; --on-navy-2: #C6CDDC;
+      --brass: #A87A2E; --brass-on-navy: #D8AA55; --focus: #16244A;
+    }
+    [data-theme="dark"] {
+      --paper: #0B1222; --ink: #E7EAF0; --muted: #98A2B4; --line: #222F48;
+      --heading: #F3F2EE; --navy: #0F1B35; --on-navy: #F3F2EE; --on-navy-2: #BAC2D3;
+      --brass: #D2A250; --brass-on-navy: #D8AA55; --focus: #D8AA55;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0; display: grid; grid-template-rows: 1fr auto;
+      background: var(--paper); color: var(--ink);
+      font: 400 1.0625rem/1.65 "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    main { display: grid; place-items: center; padding: 3rem 1.5rem; }
+    .panel { width: min(100%, 40rem); }
+    .code {
+      display: flex; align-items: center; gap: 0.85rem; margin: 0 0 1.25rem;
+      color: var(--muted); font-size: 0.975rem; font-weight: 500;
+    }
+    .code::before { content: ""; width: 2.25rem; height: 1px; background: var(--brass); }
+    h1 {
+      margin: 0 0 1rem; color: var(--heading);
+      font-family: "Source Serif 4", Georgia, "Times New Roman", serif; font-weight: 600;
+      font-size: clamp(2.25rem, 1.6rem + 2.6vw, 3.5rem); line-height: 1.08; letter-spacing: -0.02em;
+    }
+    p { margin: 0 0 2rem; max-width: 52ch; }
+    .btn {
+      display: inline-flex; align-items: center; padding: 0.85rem 1.3rem; border-radius: 6px;
+      background: var(--navy); color: var(--on-navy); text-decoration: none; font-weight: 500;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 12px 24px -14px rgba(0, 0, 0, 0.6); }
+    [data-theme="dark"] .btn { background: var(--brass-on-navy); color: #121A33; }
+    :focus-visible { outline: 2px solid var(--focus); outline-offset: 3px; border-radius: 3px; }
+    footer { padding: 1.25rem 1.5rem; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.875rem; text-align: center; }
+    @media (prefers-reduced-motion: reduce) { .btn { transition: none; } .btn:hover { transform: none; } }
+  </style>
+</head>
+<body>
+  <main>
+    <div class="panel">
+      <p class="code">Error 404</p>
+      <h1>This page does not exist</h1>
+      <p>The address may be mistyped, or the page may have moved. The portfolio of Dr. Kolla Lakshman Rao is a single page, so everything is on the home page.</p>
+      <a class="btn" id="home-link" href="/">Go to the home page</a>
+    </div>
+  </main>
+  <footer>Dr. Kolla Lakshman Rao</footer>
+  <script>
+    if (location.protocol === 'file:') document.getElementById('home-link').setAttribute('href', 'index.html');
+  </script>
+</body>
+</html>
